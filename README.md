@@ -15,5 +15,5 @@ I put all the classmates in the KlassenManager and put 19 Menschen.cs into the K
 
 The Display shows who sits on the Chair at the specific table.
 
-##UML-Diagramm 
-Untitled\ diagram\ _\ Mermaid\ Chart-2025-09-29-103929.png 
+## UML-Diagramm 
+<img width="1420" height="3840" alt="Untitled diagram _ Mermaid Chart-2025-09-29-103929" src="https://github.com/user-attachments/assets/2e8b0d71-208c-483c-80d0-ee1a85b05b6f" />
