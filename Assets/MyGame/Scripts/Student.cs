@@ -2,23 +2,30 @@ using UnityEngine;
 
 public class Student : MonoBehaviour
 {
-    [SerializeField] private Mensch[] student_array = new Mensch[19];
+    [SerializeField] private string name_student;
+    [SerializeField] private string age_student;
+    [SerializeField] private string anwesenheit_student;
+    [SerializeField] private string id_student;
+
+    private Mensch mensch;  // hier speichern wir die Daten
 
     void Start()
     {
+        mensch = new Mensch();
+        mensch.set_name(name_student);
+        mensch.set_age(age_student);
+        mensch.set_anwesenheit(anwesenheit_student);
+        mensch.set_id(id_student);
 
-        for (int i = 0; i < student_array.Length; i++)
-        {
-            Mensch m = student_array[i];
+        // Ausgabe in der Konsole
+        Debug.Log($"Schüler: Name={mensch.get_name()}, " +
+                  $"Alter={mensch.get_age()}, " +
+                  $"Anwesenheit={mensch.get_anwesenheit()}, " +
+                  $"ID={mensch.get_id()}");
+    }
 
-            if (m != null)
-            {
-                Debug.Log($"Schüler {i + 1}: " +
-                          $"Name={m.get_name()}, " +
-                          $"Alter={m.get_age()}, " +
-                          $"Anwesenheit={m.get_anwesenheit()}, " +
-                          $"ID={m.get_id()}");
-            }
-        }
+    public Mensch GetMensch()
+    {
+        return mensch;
     }
 }

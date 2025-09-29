@@ -9,6 +9,7 @@ public class Klassenverbund : MonoBehaviour
 
     public TMP_Text text_input_table;
     public TMP_Text text_output_text_field_table;
+
     Student student = new Student();
 
     void Start()
