@@ -1,16 +1,20 @@
 using UnityEngine;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using TMPro;
+using UnityEngine.UI;
 
 public class Student : MonoBehaviour
 {
     [SerializeField] private List<Mensch> schuelerListe = new List<Mensch>();
-
+    public TMP_Text text_field;
+    Mensch m = new Mensch();
     void Start()
     {
         // Alle Schüler ausgeben
         for (int i = 0; i < schuelerListe.Count; i++)
         {
-            Mensch m = schuelerListe[i];
+            m = schuelerListe[i];
             if (m != null)
             {
                 Debug.Log($"Schüler {i + 1}: " +
