@@ -1,36 +1,34 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
-using System.Globalization;
+
 public class Klassenverbund : MonoBehaviour
 {
-
+    [Header("UI Elemente")]
     public TMP_Text text_input;
     public TMP_Text text_text_field;
 
-    public TMP_Text text_input_table;
-    public TMP_Text text_output_text_field_table;
-
     [SerializeField] private TMP_InputField inputField;
-
-    Student student;
 
     void Start()
     {
-        text_input.text = "Enter Chair ID";
-        text_text_field.text = " ";
-        text_input_table.text = "Enter table number!";
-        text_output_text_field_table.text = " ";
+        text_input.text = "Enter Table ID";
+        text_text_field.text = "";
 
-        string input_from_user = inputField.text;
-        int.TryParse(input_from_user, out int number);
-        print_table_seats(number);
+
+        inputField.onEndEdit.AddListener(HandleInput);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
+    private void HandleInput(string input_from_user)
+    {
+        if (int.TryParse(input_from_user, out int number))
+        {
+            print_table_seats(number);
+        }
+        else
+        {
+            text_text_field.text = "Bitte eine gültige Zahl eingeben!";
+        }
     }
 
     public void print_table_seats(int input)
@@ -79,6 +77,9 @@ public class Klassenverbund : MonoBehaviour
         {
             text_text_field.text = "Hier sitzen Lukas und Luca";
         }
-
+        else
+        {
+            text_text_field.text = "Kein Platz für diese Nummer gefunden!";
+        }
     }
 }
