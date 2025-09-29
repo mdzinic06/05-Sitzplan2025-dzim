@@ -9,3 +9,8 @@ and with other platforms and obviously ChatGPT but I am trying not to use the AI
 
 if you delete for a reason ur Sample Scene (Main Scene) you don't have to create a new project, just simply type the whole filename of the new Scene. In my Case ist was MainScene.unity.meta and it worked perfectly!
 
+## Classmates are shown in the Console
+
+I put all the classmates in the KlassenManager and put 19 Menschen.cs into the KlassenManager to represent the people. You can enter everything you want and it shows it correctly in the console.
+
+The Display shows who sits on the Chair at the specific table.
